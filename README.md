@@ -6,6 +6,7 @@ First adds realistic sub-effects to spells: spell will damage furniture and terr
 
 Second makes your buffs permanent once you get max level in corresponding spell. Buffs basically recast automatically, constantly draining your mana.
 
-Third do the same with most summoned items. Except it will not drain mana, items just permanent. And you can dispel item just by dropping it.
+Third do the same with most summoned items. Except it will not drain mana, items are just permanent. And you can dispel item just by dropping it.
 
 Mod designed and tested with 0.G stable version, but should work fine on latest experimentals. Though new spells will not be affected
+
