@@ -1,0 +1,42 @@
+[
+  {
+    "type": "SPELL",
+    "id": "druid_veggrasp",
+    "copy-from": "druid_veggrasp",
+    "extra_effects": [ { "id": "druid_veggrasp_bash" } ]
+  },
+  {
+    "copy-from": "druid_veggrasp",
+    "id": "druid_veggrasp_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "druid_rootstrike",
+    "copy-from": "druid_rootstrike",
+    "extra_effects": [ { "id": "druid_rootstrike_bash" } ]
+  },
+  {
+    "copy-from": "druid_rootstrike",
+    "id": "druid_rootstrike_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "druid_woodshaft",
+    "copy-from": "druid_woodshaft",
+    "extra_effects": [ { "id": "druid_woodshaft_bash" } ]
+  },
+  {
+    "copy-from": "druid_woodshaft",
+    "id": "druid_woodshaft_bash",
+    "valid_targets": [ "hostile", "ground" ],
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  }
+]

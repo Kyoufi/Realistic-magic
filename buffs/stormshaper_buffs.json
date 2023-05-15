@@ -1,0 +1,154 @@
+[
+  {
+    "copy-from": "windrun",
+    "id": "windrun",
+    "type": "SPELL",
+    "learn_spells": { "windrun_permanent": 10 }
+  },
+  {
+    "id": "windrun_permanent",
+    "type": "SPELL",
+    "name": "Permanent Windrunning",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "CONCENTRATE", "SILENT", "VERBAL", "NO_HANDS", "NO_PROJECTILE" ],
+    "spell_class": "EARTHSHAPER",
+    "effect": "effect_on_condition",
+    "effect_str": "windrun_permanent",
+    "energy_source": "MANA",
+    "difficulty": 1,
+    "base_casting_time": 50,
+    "base_energy_cost": 50,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "windrun_permanent",
+	"condition": { "u_has_var": "u_have_enchant_windrun", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "enchant_windrun" }, { "u_add_var": "u_have_enchant_windrun", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "enchant_windrun", "duration": "PERMANENT" }, { "u_add_var": "u_have_enchant_windrun", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "windrun_permanent_manacost",
+    "recurrence": [ "5 m", "5 m" ],
+	"condition": { "and": [ { "u_has_var": "u_have_enchant_windrun", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 50 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 50 } ] } ],
+    "false_effect": [ { "u_lose_effect": "enchant_windrun" }, { "u_add_var": "u_have_enchant_windrun", "type": "peffect", "context": "peffect", "value": "no" } ]
+  },
+  {
+    "copy-from": "electric_eye",
+    "id": "electric_eye",
+    "type": "SPELL",
+    "learn_spells": { "electric_eye_permanent": 25 }
+  },
+  {
+    "id": "electric_eye_permanent",
+    "type": "SPELL",
+    "name": "Permanent Electric Eye",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "NO_LEGS", "SILENT", "NO_EXPLOSION_SFX" ],
+    "spell_class": "STORMSHAPER",
+    "effect": "effect_on_condition",
+    "effect_str": "electric_eye_permanent",
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "base_casting_time": 1000,
+    "base_energy_cost": 200,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "electric_eye_permanent",
+	"condition": { "u_has_var": "u_have_electric_eye", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "electric_eye" }, { "u_add_var": "u_have_electric_eye", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "electric_eye", "duration": "PERMANENT" }, { "u_add_var": "u_have_electric_eye", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "electric_eye_permanent_manacost",
+    "recurrence": [ "4 h", "4 h" ],
+	"condition": { "and": [ { "u_has_var": "u_have_electric_eye", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 200 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 200 } ] } ],
+    "false_effect": [ { "u_lose_effect": "electric_eye" }, { "u_add_var": "u_have_electric_eye", "type": "peffect", "context": "peffect", "value": "no" } ]
+  },
+  {
+    "copy-from": "electric_waves",
+    "id": "electric_waves",
+    "type": "SPELL",
+    "learn_spells": { "electric_waves_permanent": 25 }
+  },
+  {
+    "id": "electric_waves_permanent",
+    "type": "SPELL",
+    "name": "Permanent Electric Waves",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "NO_LEGS", "SILENT", "NO_EXPLOSION_SFX" ],
+    "effect": "effect_on_condition",
+    "effect_str": "electric_waves_permanent",
+    "spell_class": "STORMSHAPER",
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "base_casting_time": 1000,
+    "base_energy_cost": 200,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "electric_waves_permanent",
+	"condition": { "u_has_var": "u_have_electric_waves", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "electric_waves" }, { "u_add_var": "u_have_electric_waves", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "electric_waves", "duration": "PERMANENT" }, { "u_add_var": "u_have_electric_waves", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "electric_waves_permanent_manacost",
+    "recurrence": [ "1 h", "1 h" ],
+	"condition": { "and": [ { "u_has_var": "u_have_electric_waves", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 200 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 200 } ] } ],
+    "false_effect": [ { "u_lose_effect": "electric_waves" }, { "u_add_var": "u_have_electric_waves", "type": "peffect", "context": "peffect", "value": "no" } ]
+  },
+  {
+    "copy-from": "electric_arts",
+    "id": "electric_arts",
+    "type": "SPELL",
+    "learn_spells": { "electric_arts_permanent": 25 }
+  },
+  {
+    "id": "electric_arts_permanent",
+    "type": "SPELL",
+    "name": "Permanent Electric Arts",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "NO_EXPLOSION_SFX" ],
+    "effect": "effect_on_condition",
+    "effect_str": "electric_arts_permanent",
+    "spell_class": "STORMSHAPER",
+    "energy_source": "MANA",
+    "difficulty": 1,
+    "base_casting_time": 48000,
+    "base_energy_cost": 200,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "electric_arts_permanent",
+	"condition": { "u_has_var": "u_have_electric_arts", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "electric_arts" }, { "u_add_var": "u_have_electric_arts", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "electric_arts", "duration": "PERMANENT" }, { "u_add_var": "u_have_electric_arts", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "electric_arts_permanent_manacost",
+    "recurrence": [ "16 h", "16 h" ],
+	"condition": { "and": [ { "u_has_var": "u_have_electric_arts", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 200 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 200 } ] } ],
+    "false_effect": [ { "u_lose_effect": "electric_arts" }, { "u_add_var": "u_have_electric_arts", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

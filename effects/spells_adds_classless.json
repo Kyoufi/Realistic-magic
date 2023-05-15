@@ -1,0 +1,16 @@
+[
+  {
+    "type": "SPELL",
+    "id": "megablast",
+    "copy-from": "megablast",
+    "extra_effects": [ { "id": "megablast_bash" } ]
+  },
+  {
+    "copy-from": "megablast",
+    "valid_targets": [ "ally", "hostile", "ground" ],
+    "id": "megablast_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  }
+]

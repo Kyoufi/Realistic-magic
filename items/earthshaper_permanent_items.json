@@ -1,0 +1,69 @@
+[
+  {
+    "copy-from": "stonefist_plus",
+    "id": "stonefist_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "stonefist",
+    "id": "stonefist",
+    "type": "ARMOR",
+    "name": { "str": "pair of magical armored stone gauntlets", "str_pl": "pairs of magical armored stone gauntlets" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "earthshaper_stoneskin_plus",
+    "id": "earthshaper_stoneskin_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "aura_stoneskin",
+    "id": "aura_stoneskin",
+    "type": "ARMOR",
+    "name": { "str_sp": "stoneskin coating" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "eshaper_spawn_tools",
+    "id": "eshaper_spawn_tools",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "eshaper_hammer",
+    "id": "eshaper_hammer",
+    "type": "TOOL",
+    "name": { "str": "earthshaper's hammer" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "eshaper_pickaxe",
+    "id": "eshaper_pickaxe",
+    "type": "TOOL",
+    "name": { "str": "earthshaper's pickaxe" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "eshaper_ax",
+    "id": "eshaper_ax",
+    "type": "TOOL",
+    "name": { "str": "earthshaper's axe" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "eshaper_knife",
+    "id": "eshaper_knife",
+    "type": "TOOL",
+    "name": { "str": "earthshaper's knife", "str_pl": "earthshaper's knives" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "eshaper_shovel",
+    "id": "eshaper_shovel",
+    "type": "TOOL",
+    "name": { "str": "earthshaper's shovel" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  }
+]

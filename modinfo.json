@@ -1,0 +1,12 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "permanent",
+    "name": "Permanent",
+    "authors": [ "Kyoufi" ],
+    "maintainers": [ "Kyoufi" ],
+    "description": "Various improvements to Magiclysm spells.",
+    "category": "magical",
+    "dependencies": [ "dda", "Magiclysm" ]
+  }
+]

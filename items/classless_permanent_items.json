@@ -1,0 +1,57 @@
+[
+  {
+    "copy-from": "create_atomic_light",
+    "id": "create_atomic_light",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "magic_light",
+    "id": "magic_light",
+    "type": "ARMOR",
+    "name": "magic light",
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "obfuscated_body_plus",
+    "id": "obfuscated_body_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "obfuscating_aura",
+    "id": "obfuscating_aura",
+    "type": "ARMOR",
+    "name": "obfuscating aura",
+    "flags": [ "AURA", "SEMITANGIBLE", "OVERSIZE", "ONLY_ONE", "TRADER_AVOID", "NO_DROP", "NONCONDUCTIVE" ]
+  },
+  {
+    "copy-from": "protection_aura_plus",
+    "id": "protection_aura_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "protect_env",
+    "id": "protect_env",
+    "type": "ARMOR",
+    "name": { "str": "aura of protection", "str_pl": "auras of protection" },
+    "flags": [ "AURA", "SEMITANGIBLE", "OVERSIZE", "ONLY_ONE", "TRADER_AVOID", "NO_DROP", "NONCONDUCTIVE" ]
+  },
+  {
+    "copy-from": "acid_resistance_greater",
+    "id": "acid_resistance_greater",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] },
+    "max_duration": 9000000,
+    "duration_increment": 360000,
+    "max_level": 25
+  },
+  {
+    "copy-from": "acid_res_aura_greater",
+    "id": "acid_res_aura_greater",
+    "type": "ARMOR",
+    "name": "greater acid resistance aura",
+    "flags": [ "AURA", "SEMITANGIBLE", "OVERSIZE", "ONLY_ONE", "TRADER_AVOID", "NO_DROP", "NONCONDUCTIVE" ]
+  }
+]

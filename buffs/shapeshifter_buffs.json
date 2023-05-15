@@ -1,0 +1,40 @@
+[
+  {
+    "copy-from": "biomechanic",
+    "id": "biomechanic",
+    "type": "SPELL",
+    "learn_spells": { "biomechanic_permanent": 35 }
+  },
+  {
+    "id": "biomechanic_permanent",
+    "type": "SPELL",
+    "name": "Permanent Biomechanic",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "SILENT", "NO_LEGS", "NO_HANDS" ],
+    "spell_class": "SHAPESHIFTER",
+    "difficulty": 8,
+    "effect": "effect_on_condition",
+    "effect_str": "biomechanic_permanent",
+    "energy_source": "MANA",
+    "base_casting_time": 200,
+    "base_energy_cost": 50,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "biomechanic_permanent",
+	"condition": { "u_has_var": "u_have_biomechanic", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "biomechanic" }, { "u_add_var": "u_have_biomechanic", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "biomechanic", "duration": "PERMANENT" }, { "u_add_var": "u_have_biomechanic", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "biomechanic_permanent_manacost",
+    "recurrence": [ "5 m 29 s", "5 m 29 s" ],
+	"condition": { "and": [ { "u_has_var": "u_have_biomechanic", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 50 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 50 } ] } ],
+    "false_effect": [ { "u_lose_effect": "biomechanic" }, { "u_add_var": "u_have_biomechanic", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

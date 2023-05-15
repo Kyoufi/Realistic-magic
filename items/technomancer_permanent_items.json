@@ -1,0 +1,41 @@
+[
+  {
+    "copy-from": "holy_blade_plus",
+    "id": "holy_blade_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "longsword_holy",
+    "id": "longsword_holy",
+    "type": "GENERIC",
+    "name": { "str": "holy sword" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "spirit_armor_plus",
+    "id": "spirit_armor_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "armor_spirit",
+    "id": "armor_spirit",
+    "type": "ARMOR",
+    "name": { "str_sp": "spiritual armor" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "create_atomic_lamp",
+    "id": "create_atomic_lamp",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "magic_lamp",
+    "id": "magic_lamp",
+    "name": "magic lamp",
+    "type": "ARMOR",
+    "extend": { "flags": [ "NO_DROP" ] }
+  }
+]

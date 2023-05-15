@@ -1,0 +1,40 @@
+[
+  {
+    "copy-from": "overclocker_drive",
+    "id": "overclocker_drive",
+    "type": "SPELL",
+    "learn_spells": { "overclocker_drive_permanent": 35 }
+  },
+  {
+    "id": "overclocker_drive_permanent",
+    "type": "SPELL",
+    "name": "Permanent Overdrive",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "NO_HANDS", "NO_LEGS", "SILENT" ],
+    "spell_class": "OVERCLOCKER",
+    "difficulty": 9,
+    "effect": "effect_on_condition",
+    "effect_str": "overclocker_drive_permanent",
+    "energy_source": "MANA",
+    "base_casting_time": 600,
+    "base_energy_cost": 900,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "overclocker_drive_permanent",
+	"condition": { "u_has_var": "u_have_overclocker_drive_effect", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "overclocker_drive_effect" }, { "u_add_var": "u_have_overclocker_drive_effect", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "overclocker_drive_effect", "duration": "PERMANENT" }, { "u_add_var": "u_have_overclocker_drive_effect", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "overclocker_drive_permanent_manacost",
+    "recurrence": [ "25 m", "25 m" ],
+	"condition": { "and": [ { "u_has_var": "u_have_overclocker_drive_effect", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 900 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 900 } ] } ],
+    "false_effect": [ { "u_lose_effect": "overclocker_drive_effect" }, { "u_add_var": "u_have_overclocker_drive_effect", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "type": "SPELL",
+    "id": "seismic_stomp",
+    "copy-from": "seismic_stomp",
+    "extend": { "flags": [ "IGNORE_WALLS" ] },
+    "extra_effects": [ { "id": "seismic_stomp_bash" } ]
+  },
+  {
+    "copy-from": "seismic_stomp",
+    "id": "seismic_stomp_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "eshaper_shardspray",
+    "copy-from": "eshaper_shardspray",
+    "extra_effects": [ { "id": "eshaper_shardspray_bash" } ]
+  },
+  {
+    "copy-from": "eshaper_shardspray",
+    "id": "eshaper_shardspray_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "eshaper_piercing_bolt",
+    "copy-from": "eshaper_piercing_bolt",
+    "extra_effects": [ { "id": "eshaper_piercing_bolt_bash" } ]
+  },
+  {
+    "copy-from": "eshaper_piercing_bolt",
+    "id": "eshaper_piercing_bolt_bash",
+    "valid_targets": [ "hostile", "ground" ],
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "eshaper_shardstorm",
+    "copy-from": "eshaper_shardstorm",
+    "extra_effects": [ { "id": "eshaper_shardstorm_bash" } ]
+  },
+  {
+    "copy-from": "eshaper_shardstorm",
+    "id": "eshaper_shardstorm_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "eshaper_rockbolt",
+    "copy-from": "eshaper_rockbolt",
+    "extra_effects": [ { "id": "eshaper_rockbolt_bash" } ]
+  },
+  {
+    "copy-from": "eshaper_rockbolt",
+    "id": "eshaper_rockbolt_bash",
+    "valid_targets": [ "hostile", "ground" ],
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "eshaper_impalement",
+    "copy-from": "eshaper_impalement",
+    "extra_effects": [ { "id": "eshaper_impalement_bash" }, { "id": "eshaper_impalement_moves" } ]
+  },
+  {
+    "copy-from": "eshaper_impalement",
+    "id": "eshaper_impalement_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "reactive_armor",
+    "copy-from": "reactive_armor",
+    "extra_effects": [ { "id": "reactive_armor_bash" } ]
+  },
+  {
+    "copy-from": "reactive_armor",
+    "id": "reactive_armor_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  }
+]

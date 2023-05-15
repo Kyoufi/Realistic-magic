@@ -1,0 +1,62 @@
+[
+  {
+    "type": "SPELL",
+    "id": "windstrike",
+    "copy-from": "windstrike",
+    "extra_effects": [ { "id": "windstrike_bash" } ]
+  },
+  {
+    "copy-from": "windstrike",
+    "id": "windstrike_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "storm_shipwrecker",
+    "copy-from": "storm_shipwrecker",
+    "extra_effects": [ { "id": "storm_shipwrecker_bash" }, { "id": "shipwrecker_push" }, { "id": "shipwrecker_push" } ]
+  },
+  {
+    "copy-from": "storm_shipwrecker",
+    "id": "storm_shipwrecker_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "explosive_decompression",
+    "copy-from": "explosive_decompression",
+    "extra_effects": [ { "id": "explosive_decompression_bash" } ]
+  },
+  {
+    "copy-from": "explosive_decompression",
+    "id": "explosive_decompression_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "vacuum_decompression",
+    "copy-from": "vacuum_decompression",
+    "extra_effects": [
+	  { "id": "vacuum_decompression_bash" }, 
+      { "id": "vacuum_decompression_pull" },
+      { "id": "vacuum_decompression_pull" },
+      { "id": "vacuum_decompression_pull" },
+      { "id": "vacuum_decompression_pull" },
+      { "id": "vacuum_decompression_pull" },
+      { "id": "vacuum_decompression_pull" },
+      { "id": "vacuum_decompression_pull" } ]
+  },
+  {
+    "copy-from": "vacuum_decompression",
+    "id": "vacuum_decompression_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  }
+]

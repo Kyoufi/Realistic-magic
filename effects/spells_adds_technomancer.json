@@ -1,0 +1,45 @@
+[
+  {
+    "type": "SPELL",
+    "id": "overcharge_eyes",
+    "copy-from": "overcharge_eyes",
+    "extra_effects": [ { "id": "overcharge_eyes_bash" }, { "id": "overcharge_burn", "hit_self": true } ]
+  },
+  {
+    "copy-from": "overcharge_eyes",
+    "id": "overcharge_eyes_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "valid_targets": [ "hostile", "ally", "ground" ],
+    "id": "technomancer_knifeshot",
+    "copy-from": "technomancer_knifeshot",
+    "extra_effects": [ { "id": "technomancer_knifeshot_bash" } ]
+  },
+  {
+    "copy-from": "technomancer_knifeshot",
+    "id": "technomancer_knifeshot_bash",
+    "type": "SPELL",
+    "valid_targets": [ "hostile", "ally", "ground" ],
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "valid_targets": [ "hostile", "ally", "ground" ],
+    "id": "technomancer_knifeshot_superior",
+    "copy-from": "technomancer_knifeshot_superior",
+    "extra_effects": [ { "id": "technomancer_knifeshot_superior_bash" } ]
+  },
+  {
+    "copy-from": "technomancer_knifeshot_superior",
+    "id": "technomancer_knifeshot_superior_bash",
+    "type": "SPELL",
+    "valid_targets": [ "hostile", "ally", "ground" ],
+    "effect": "bash",
+    "extra_effects": [  ]
+  }
+]

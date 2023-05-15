@@ -1,0 +1,28 @@
+[
+  {
+    "copy-from": "magus_force_jar",
+    "id": "magus_force_jar",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "jar_3l_force",
+    "id": "jar_3l_force",
+    "type": "GENERIC",
+    "name": { "str": "jar of force", "str_pl": "jars of force" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "magus_summon_impact_sling_plus",
+    "id": "magus_summon_impact_sling_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "impactsling",
+    "id": "impactsling",
+    "type": "GUN",
+    "name": { "str": "impact sling" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  }
+]

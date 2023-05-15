@@ -1,0 +1,171 @@
+[
+  {
+    "type": "SPELL",
+    "id": "quake",
+    "copy-from": "quake",
+    "extra_effects": [ { "id": "quake_bash" }, { "id": "quake_transform" } ]
+  },
+  {
+    "copy-from": "quake",
+    "id": "quake_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "force_blade",
+    "copy-from": "force_blade",
+    "extra_effects": [ { "id": "force_blade_bash" } ]
+  },
+  {
+    "copy-from": "force_blade",
+    "id": "force_blade_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "ice_clave_blunt",
+    "copy-from": "ice_clave_blunt",
+    "extra_effects": [ { "id": "ice_clave_blunt_bash" } ]
+  },
+  {
+    "copy-from": "ice_clave_blunt",
+    "id": "ice_clave_blunt_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "gravitymage_graviton_damage",
+    "copy-from": "gravitymage_graviton_damage",
+    "extra_effects": [ { "id": "gravitymage_graviton_damage_bash" } ]
+  },
+  {
+    "copy-from": "gravitymage_graviton_damage",
+    "id": "gravitymage_graviton_damage_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "gravitymage_graviton_centerdamage",
+    "copy-from": "gravitymage_graviton_centerdamage",
+    "extra_effects": [ { "id": "gravitymage_graviton_centerdamage_bash" } ]
+  },
+  {
+    "copy-from": "gravitymage_graviton_centerdamage",
+    "id": "gravitymage_graviton_centerdamage_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "spear_of_light",
+    "copy-from": "spear_of_light",
+    "extra_effects": [ { "id": "spear_of_light_bash" } ]
+  },
+  {
+    "copy-from": "spear_of_light",
+    "id": "spear_of_light_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "railgun",
+    "copy-from": "railgun",
+    "extra_effects": [ { "id": "railgun_bash" }, { "id": "railgun_sparks" } ]
+  },
+  {
+    "copy-from": "railgun",
+    "id": "railgun_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "horizon_vortex_bash",
+    "copy-from": "horizon_vortex_bash",
+    "extra_effects": [ { "id": "horizon_vortex_bash_bash" } ]
+  },
+  {
+    "copy-from": "horizon_vortex_bash",
+    "id": "horizon_vortex_bash_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "horizon_vortex_pure",
+    "copy-from": "horizon_vortex_pure",
+    "extra_effects": [ { "id": "horizon_vortex_pure_bash" } ]
+  },
+  {
+    "copy-from": "horizon_vortex_pure",
+    "id": "horizon_vortex_pure_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "horizon_vortex_cut",
+    "copy-from": "horizon_vortex_cut",
+    "extra_effects": [ { "id": "horizon_vortex_cut_bash" } ]
+  },
+  {
+    "copy-from": "horizon_vortex_cut",
+    "id": "horizon_vortex_cut_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "horizon_vortex_stab",
+    "copy-from": "horizon_vortex_stab",
+    "extra_effects": [ { "id": "horizon_vortex_stab_bash" } ]
+  },
+  {
+    "copy-from": "horizon_vortex_stab",
+    "id": "horizon_vortex_stab_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "lava_bomb_shrapnel",
+    "copy-from": "lava_bomb_shrapnel",
+    "extra_effects": [ { "id": "lava_bomb_shrapnel_bash" } ]
+  },
+  {
+    "copy-from": "lava_bomb_shrapnel",
+    "id": "lava_bomb_shrapnel_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "lava_bomb_main",
+    "copy-from": "lava_bomb_main",
+    "extra_effects": [ { "id": "lava_bomb_main_bash" }, { "id": "lava_bomb_shrapnel" }, { "id": "lava_bomb_heat" }, { "id": "lava_bomb_ter" } ]
+  },
+  {
+    "copy-from": "lava_bomb_main",
+    "id": "lava_bomb_main_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  }
+]

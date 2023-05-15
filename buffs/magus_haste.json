@@ -1,0 +1,40 @@
+[
+  {
+    "copy-from": "magus_haste",
+    "id": "magus_haste",
+    "type": "SPELL",
+    "learn_spells": { "magus_haste_permanent": 20 }
+  },
+  {
+    "id": "magus_haste_permanent",
+    "type": "SPELL",
+    "name": "Permanent haste",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "LOUD", "VERBAL", "SOMATIC", "NO_PROJECTILE" ],
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_MAGUS_HASTE_PERMANENT_EFFECT",
+    "spell_class": "MAGUS",
+    "energy_source": "MANA",
+    "difficulty": 9,
+    "base_casting_time": 200,
+    "base_energy_cost": 450,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MAGUS_HASTE_PERMANENT_EFFECT",
+	"condition": { "u_has_var": "u_have_haste", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "haste" }, { "u_add_var": "u_have_haste", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "haste", "duration": "PERMANENT" }, { "u_add_var": "u_have_haste", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_MAGUS_HASTE_PERMANENT_MANACOST",
+    "recurrence": [ "120 s", "120 s" ],
+	"condition": { "and": [ { "u_has_var": "u_have_haste", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 450 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 450 } ] } ],
+	"false_effect": [ { "u_lose_effect": "haste" }, { "u_add_var": "u_have_haste", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

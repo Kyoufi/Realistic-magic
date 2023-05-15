@@ -1,0 +1,29 @@
+[
+  {
+    "type": "SPELL",
+    "id": "flask_spear",
+    "copy-from": "flask_spear",
+    "extra_effects": [ { "id": "flask_spear_bash" } ]
+  },
+  {
+    "copy-from": "flask_spear",
+    "id": "flask_spear_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "mana_bolt_random",
+    "copy-from": "mana_bolt_random",
+    "extra_effects": [ { "id": "mana_bolt_random_bash" } ]
+  },
+  {
+    "copy-from": "mana_bolt_random",
+    "id": "mana_bolt_random_bash",
+    "valid_targets": [ "hostile", "ground" ],
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  }
+]

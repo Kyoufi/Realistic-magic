@@ -1,0 +1,83 @@
+[
+  {
+    "type": "SPELL",
+    "id": "magus_mana_beam",
+    "copy-from": "magus_mana_beam",
+    "extra_effects": [ { "id": "magus_mana_beam_bash" } ]
+  },
+  {
+    "copy-from": "magus_mana_beam",
+    "id": "magus_mana_beam_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extend": { "flags": [ "NO_PROJECTILE" ] },
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "magic_missile",
+    "copy-from": "magic_missile",
+    "extra_effects": [ { "id": "magic_missile_bash" } ]
+  },
+  {
+    "copy-from": "magic_missile",
+    "id": "magic_missile_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "magus_mana_bolt",
+    "copy-from": "magus_mana_bolt",
+    "extra_effects": [ { "id": "magus_mana_bolt_bash" } ]
+  },
+  {
+    "copy-from": "magus_mana_bolt",
+    "valid_targets": [ "hostile", "ground" ],
+    "id": "magus_mana_bolt_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "gravity_well",
+    "copy-from": "gravity_well",
+    "extend": { "flags": [ "IGNORE_WALLS" ] },
+    "extra_effects": [ { "id": "gravity_well_bash" } ]
+  },
+  {
+    "copy-from": "gravity_well",
+    "id": "gravity_well_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "magus_mana_blast",
+    "copy-from": "magus_mana_blast",
+    "extra_effects": [ { "id": "magus_mana_blast_bash" } ]
+  },
+  {
+    "copy-from": "magus_mana_blast",
+    "id": "magus_mana_blast_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "focused_bolt",
+    "copy-from": "focused_bolt",
+    "extra_effects": [ { "id": "focused_bolt_bash" } ]
+  },
+  {
+    "copy-from": "focused_bolt",
+    "id": "focused_bolt_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  }
+]

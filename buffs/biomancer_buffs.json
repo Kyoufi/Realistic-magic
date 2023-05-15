@@ -1,0 +1,78 @@
+[
+  {
+    "copy-from": "bio_grotesque",
+    "id": "bio_grotesque",
+    "type": "SPELL",
+    "learn_spells": { "bio_grotesque_permanent": 20 }
+  },
+  {
+    "id": "bio_grotesque_permanent",
+    "type": "SPELL",
+    "name": "Permanent Grotesque Enhancement",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "SOMATIC", "LOUD" ],
+    "effect": "effect_on_condition",
+    "effect_str": "bio_grotesque_permanent",
+    "spell_class": "BIOMANCER",
+    "energy_source": "MANA",
+    "difficulty": 6,
+    "base_casting_time": 50,
+    "base_energy_cost": 150,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_grotesque_permanent",
+	"condition": { "u_has_var": "u_have_bio_boost", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "bio_boost" }, { "u_add_var": "u_have_bio_boost", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "bio_boost", "duration": "PERMANENT" }, { "u_add_var": "u_have_bio_boost", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bio_grotesque_permanent_manacost",
+    "recurrence": [ "10 m", "10 m" ],
+	"condition": { "and": [ { "u_has_var": "u_have_bio_boost", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 150 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 150 } ] } ],
+    "false_effect": [ { "u_lose_effect": "bio_boost" }, { "u_add_var": "u_have_bio_boost", "type": "peffect", "context": "peffect", "value": "no" } ]
+  },
+  {
+    "copy-from": "biomancer_coagulant_weave",
+    "id": "biomancer_coagulant_weave",
+    "type": "SPELL",
+    "learn_spells": { "biomancer_coagulant_weave_permanent": 20 }
+  },
+  {
+    "id": "biomancer_coagulant_weave_permanent",
+    "type": "SPELL",
+    "name": "Permanent Coagulant Weave",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "SOMATIC", "VERBAL" ],
+    "effect": "effect_on_condition",
+    "effect_str": "biomancer_coagulant_weave_permanent",
+    "spell_class": "BIOMANCER",
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "base_casting_time": 200,
+    "base_energy_cost": 100,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "biomancer_coagulant_weave_permanent",
+	"condition": { "u_has_var": "u_have_bio_weave", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "bio_weave" }, { "u_add_var": "u_have_bio_weave", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "bio_weave", "duration": "PERMANENT" }, { "u_add_var": "u_have_bio_weave", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "biomancer_coagulant_weave_permanent_manacost",
+    "recurrence": [ "15 m", "15 m" ],
+	"condition": { "and": [ { "u_has_var": "u_have_bio_weave", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 100 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 100 } ] } ],
+    "false_effect": [ { "u_lose_effect": "bio_weave" }, { "u_add_var": "u_have_bio_weave", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

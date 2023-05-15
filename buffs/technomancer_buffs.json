@@ -1,0 +1,116 @@
+[
+  {
+    "copy-from": "bless",
+    "id": "bless",
+    "type": "SPELL",
+    "learn_spells": { "bless_permanent": 20 }
+  },
+  {
+    "id": "bless_permanent",
+    "type": "SPELL",
+    "name": "Permanent Bless",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "VERBAL", "SOMATIC", "NO_LEGS", "NO_PROJECTILE" ],
+    "spell_class": "TECHNOMANCER",
+    "effect": "effect_on_condition",
+    "effect_str": "bless_permanent",
+    "energy_source": "MANA",
+    "difficulty": 5,
+    "base_casting_time": 100,
+    "base_energy_cost": 100,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bless_permanent",
+	"condition": { "u_has_var": "u_have_bless", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "bless" }, { "u_add_var": "u_have_bless", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "bless", "duration": "PERMANENT" }, { "u_add_var": "u_have_bless", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "bless_permanent_manacost",
+    "recurrence": [ "5 m", "5 m" ],
+	"condition": { "and": [ { "u_has_var": "u_have_bless", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 100 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 100 } ] } ],
+    "false_effect": [ { "u_lose_effect": "bless" }, { "u_add_var": "u_have_bless", "type": "peffect", "context": "peffect", "value": "no" } ]
+  },
+  {
+    "copy-from": "invisibility",
+    "id": "invisibility",
+    "type": "SPELL",
+    "learn_spells": { "invisibility_permanent": 20 }
+  },
+  {
+    "id": "invisibility_permanent",
+    "type": "SPELL",
+    "name": "Permanent Invisibility",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "NO_PROJECTILE" ],
+    "spell_class": "TECHNOMANCER",
+    "effect": "effect_on_condition",
+    "effect_str": "invisibility_permanent",
+    "energy_source": "MANA",
+    "difficulty": 4,
+    "base_casting_time": 100,
+    "base_energy_cost": 400,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "invisibility_permanent",
+	"condition": { "u_has_var": "u_have_invisibility", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "invisibility" }, { "u_add_var": "u_have_invisibility", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "invisibility", "duration": "PERMANENT" }, { "u_add_var": "u_have_invisibility", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "invisibility_permanent_manacost",
+    "recurrence": [ "1 m", "1 m" ],
+	"condition": { "and": [ { "u_has_var": "u_have_invisibility", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 400 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 400 } ] } ],
+    "false_effect": [ { "u_lose_effect": "invisibility" }, { "u_add_var": "u_have_invisibility", "type": "peffect", "context": "peffect", "value": "no" } ]
+  },
+  {
+    "copy-from": "synaptic_stimulation",
+    "id": "synaptic_stimulation",
+    "type": "SPELL",
+    "learn_spells": { "synaptic_stimulation_permanent": 20 }
+  },
+  {
+    "id": "synaptic_stimulation_permanent",
+    "type": "SPELL",
+    "name": "Permanent Synaptic Stimulation",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "NO_LEGS", "VERBAL", "NO_PROJECTILE" ],
+    "effect": "effect_on_condition",
+    "effect_str": "synaptic_stimulation_permanent",
+    "spell_class": "TECHNOMANCER",
+    "energy_source": "MANA",
+    "difficulty": 7,
+    "final_casting_time": 450,
+    "final_energy_cost": 350,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "synaptic_stimulation_permanent",
+	"condition": { "u_has_var": "u_have_synaptic_stim", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "synaptic_stim" }, { "u_add_var": "u_have_synaptic_stim", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "synaptic_stim", "duration": "PERMANENT" }, { "u_add_var": "u_have_synaptic_stim", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "synaptic_stimulation_permanent_manacost",
+    "recurrence": [ "30 m", "30 m" ],
+	"condition": { "and": [ { "u_has_var": "u_have_synaptic_stim", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 350 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 350 } ] } ],
+    "false_effect": [ { "u_lose_effect": "synaptic_stim" }, { "u_add_var": "u_have_synaptic_stim", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

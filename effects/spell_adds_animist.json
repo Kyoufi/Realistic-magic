@@ -1,0 +1,16 @@
+[
+  {
+    "type": "SPELL",
+    "id": "smite",
+    "copy-from": "smite",
+    "extra_effects": [ { "id": "smite_bash" } ]
+  },
+  {
+    "copy-from": "smite",
+    "valid_targets": [ "hostile", "ground" ],
+    "id": "smite_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  }
+]

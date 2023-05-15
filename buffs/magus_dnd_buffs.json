@@ -1,0 +1,130 @@
+[
+  {
+    "copy-from": "cats_grace",
+    "id": "cats_grace",
+    "type": "SPELL",
+    "learn_spells": { "cats_grace_permanent": 20 }
+  },
+  {
+    "id": "cats_grace_permanent",
+    "type": "SPELL",
+    "name": "Cat's Grace permanent",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "max_level": 0,
+    "spell_class": "MAGUS",
+    "energy_source": "MANA",
+    "base_energy_cost": 300,
+    "base_casting_time": 250,
+    "difficulty": 5,
+    "flags": [ "VERBAL", "SOMATIC", "NO_LEGS", "NO_PROJECTILE" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "cats_grace_permanent"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "cats_grace_permanent",
+	"condition": { "u_has_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "cats_grace" }, { "u_lose_effect": "eagles_sight" }, { "u_lose_effect": "ogres_strength" }, { "u_lose_effect": "foxs_cunning" }, { "u_add_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "cats_grace", "duration": "PERMANENT" }, { "u_add_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "copy-from": "eagles_sight",
+    "id": "eagles_sight",
+    "type": "SPELL",
+    "learn_spells": { "eagles_sight_permanent": 20 }
+  },
+  {
+    "id": "eagles_sight_permanent",
+    "type": "SPELL",
+    "name": "Eagle's Sight permanent",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "max_level": 0,
+    "spell_class": "MAGUS",
+    "energy_source": "MANA",
+    "base_energy_cost": 300,
+    "base_casting_time": 250,
+    "difficulty": 5,
+    "flags": [ "VERBAL", "SOMATIC", "NO_LEGS", "NO_PROJECTILE" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "eagles_sight_permanent"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eagles_sight_permanent",
+	"condition": { "u_has_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "cats_grace" }, { "u_lose_effect": "eagles_sight" }, { "u_lose_effect": "ogres_strength" }, { "u_lose_effect": "foxs_cunning" }, { "u_add_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "eagles_sight", "duration": "PERMANENT" }, { "u_add_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "copy-from": "ogres_strength",
+    "id": "ogres_strength",
+    "type": "SPELL",
+    "learn_spells": { "ogres_strength_permanent": 20 }
+  },
+  {
+    "id": "ogres_strength_permanent",
+    "type": "SPELL",
+    "name": "Ogre's Strength permanent",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "max_level": 0,
+    "spell_class": "MAGUS",
+    "energy_source": "MANA",
+    "base_energy_cost": 300,
+    "base_casting_time": 250,
+    "difficulty": 5,
+    "flags": [ "VERBAL", "SOMATIC", "NO_LEGS", "NO_PROJECTILE" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "ogres_strength_permanent"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "ogres_strength_permanent",
+	"condition": { "u_has_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "cats_grace" }, { "u_lose_effect": "eagles_sight" }, { "u_lose_effect": "ogres_strength" }, { "u_lose_effect": "foxs_cunning" }, { "u_add_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "ogres_strength", "duration": "PERMANENT" }, { "u_add_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "copy-from": "foxs_cunning",
+    "id": "foxs_cunning",
+    "type": "SPELL",
+    "learn_spells": { "foxs_cunning_permanent": 20 }
+  },
+  {
+    "id": "foxs_cunning_permanent",
+    "type": "SPELL",
+    "name": "Fox's Cunning permanent",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "max_level": 0,
+    "spell_class": "MAGUS",
+    "energy_source": "MANA",
+    "base_energy_cost": 300,
+    "base_casting_time": 250,
+    "difficulty": 5,
+    "flags": [ "VERBAL", "SOMATIC", "NO_LEGS", "NO_PROJECTILE" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "foxs_cunning_permanent"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "foxs_cunning_permanent",
+	"condition": { "u_has_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "cats_grace" }, { "u_lose_effect": "eagles_sight" }, { "u_lose_effect": "ogres_strength" }, { "u_lose_effect": "foxs_cunning" }, { "u_add_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "foxs_cunning", "duration": "PERMANENT" }, { "u_add_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "magus_dnd_buffs_manacost",
+    "recurrence": [ "3600 s", "3600 s" ],
+	"condition": { "and": [ { "u_has_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 300 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 300 } ] } ],
+    "false_effect": [ { "u_lose_effect": "cats_grace" }, { "u_lose_effect": "eagles_sight" }, { "u_lose_effect": "ogres_strength" }, { "u_lose_effect": "foxs_cunning" }, { "u_add_var": "u_have_dnd_buff", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

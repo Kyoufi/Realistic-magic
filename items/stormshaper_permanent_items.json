@@ -1,0 +1,58 @@
+[
+  {
+    "copy-from": "storm_hammer_plus",
+    "id": "storm_hammer_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "stormhammer",
+    "id": "stormhammer",
+    "type": "GENERIC",
+    "name": { "str": "The Stormhammer" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "stormfist_plus",
+    "id": "stormfist_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "stormglove",
+    "id": "stormglove",
+    "type": "ARMOR",
+    "name": { "str": "Stormfist" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "create_electric_lighter",
+    "id": "create_electric_lighter",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "air_bubble",
+    "id": "air_bubble",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "flask_ethereal_rebreather",
+    "id": "flask_ethereal_rebreather",
+    "type": "ARMOR",
+    "name": { "str_sp": "air bubble" },
+    "flags": [
+      "WATER_FRIENDLY",
+      "SEMITANGIBLE",
+      "ONLY_ONE",
+      "OVERSIZE",
+      "AURA",
+      "ZERO_WEIGHT",
+      "NO_DROP",
+      "NONCONDUCTIVE",
+      "TRADER_AVOID",
+      "REBREATHER"
+    ]
+  }
+]

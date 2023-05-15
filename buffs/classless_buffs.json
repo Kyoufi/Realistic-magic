@@ -1,0 +1,38 @@
+[
+  {
+    "copy-from": "dark_sight",
+    "id": "dark_sight",
+    "type": "SPELL",
+    "learn_spells": { "dark_sight_permanent": 20 }
+  },
+  {
+    "id": "dark_sight_permanent",
+    "type": "SPELL",
+    "name": "Permanent Dark Sight",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "effect": "effect_on_condition",
+    "effect_str": "dark_sight_permanent",
+    "energy_source": "MANA",
+    "difficulty": 6,
+    "base_casting_time": 100,
+    "base_energy_cost": 500,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "dark_sight_permanent",
+	"condition": { "u_has_var": "u_have_dark_sight", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "dark_sight" }, { "u_add_var": "u_have_dark_sight", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "dark_sight", "duration": "PERMANENT" }, { "u_add_var": "u_have_dark_sight", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "dark_sight_permanent_manacost",
+    "recurrence": [ "2 h 46 m", "2 h 46 m" ],
+	"condition": { "and": [ { "u_has_var": "u_have_dark_sight", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 500 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 500 } ] } ],
+	"false_effect": [ { "u_lose_effect": "dark_sight" }, { "u_add_var": "u_have_dark_sight", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

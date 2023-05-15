@@ -1,0 +1,78 @@
+[
+  {
+    "copy-from": "eshaper_melee_damage",
+    "id": "eshaper_melee_damage",
+    "type": "SPELL",
+    "learn_spells": { "eshaper_melee_damage_permanent": 25 }
+  },
+  {
+    "id": "eshaper_melee_damage_permanent",
+    "type": "SPELL",
+    "name": "Permanent Weighting",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "NO_LEGS", "SILENT", "NO_EXPLOSION_SFX" ],
+    "spell_class": "EARTHSHAPER",
+    "effect": "effect_on_condition",
+    "effect_str": "eshaper_melee_damage_permanent",
+    "energy_source": "MANA",
+    "difficulty": 6,
+    "base_casting_time": 500,
+    "base_energy_cost": 200,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eshaper_melee_damage_permanent",
+	"condition": { "u_has_var": "u_have_eshaper_melee_damage", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "eshaper_melee_damage" }, { "u_add_var": "u_have_eshaper_melee_damage", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "eshaper_melee_damage", "duration": "PERMANENT" }, { "u_add_var": "u_have_eshaper_melee_damage", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eshaper_melee_damage_permanent_manacost",
+    "recurrence": [ "1 h", "1 h" ],
+	"condition": { "and": [ { "u_has_var": "u_have_eshaper_melee_damage", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 200 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 200 } ] } ],
+    "false_effect": [ { "u_lose_effect": "eshaper_melee_damage" }, { "u_add_var": "u_have_eshaper_melee_damage", "type": "peffect", "context": "peffect", "value": "no" } ]
+  },
+  {
+    "copy-from": "eshaper_crystal_wrap",
+    "id": "eshaper_crystal_wrap",
+    "type": "SPELL",
+    "learn_spells": { "eshaper_crystal_wrap_permanent": 25 }
+  },
+  {
+    "id": "eshaper_crystal_wrap_permanent",
+    "type": "SPELL",
+    "name": "Permanent Crystal Wrapping",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "NO_LEGS", "SILENT", "NO_EXPLOSION_SFX" ],
+    "spell_class": "EARTHSHAPER",
+    "effect": "effect_on_condition",
+    "effect_str": "eshaper_crystal_wrap_permanent",
+    "energy_source": "MANA",
+    "difficulty": 6,
+    "base_casting_time": 500,
+    "base_energy_cost": 200,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eshaper_crystal_wrap_permanent",
+	"condition": { "u_has_var": "u_have_eshaper_crystal_wrap", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "eshaper_crystal_wrap" }, { "u_add_var": "u_have_eshaper_crystal_wrap", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "eshaper_crystal_wrap", "duration": "PERMANENT" }, { "u_add_var": "u_have_eshaper_crystal_wrap", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "eshaper_crystal_wrap_permanent_manacost",
+    "recurrence": [ "1 h", "1 h" ],
+	"condition": { "and": [ { "u_has_var": "u_have_eshaper_crystal_wrap", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 200 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 200 } ] } ],
+    "false_effect": [ { "u_lose_effect": "eshaper_crystal_wrap" }, { "u_add_var": "u_have_eshaper_crystal_wrap", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

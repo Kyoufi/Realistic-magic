@@ -1,0 +1,40 @@
+[
+  {
+    "copy-from": "gravity_mage_melee",
+    "id": "gravity_mage_melee",
+    "type": "SPELL",
+    "learn_spells": { "gravity_mage_melee_permanent": 35 }
+  },
+  {
+    "id": "gravity_mage_melee_permanent",
+    "type": "SPELL",
+    "name": "Permanent Tactile Telekinesis",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "NO_LEGS", "SILENT", "NO_EXPLOSION_SFX", "MUST_HAVE_CLASS_TO_LEARN" ],
+    "spell_class": "GRAVITY_MAGE",
+    "difficulty": 7,
+    "effect": "effect_on_condition",
+    "effect_str": "gravity_mage_melee_permanent",
+    "energy_source": "MANA",
+    "base_casting_time": 150,
+    "base_energy_cost": 150,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "gravity_mage_melee_permanent",
+	"condition": { "u_has_var": "u_have_gravity_mage_melee", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "gravity_mage_melee" }, { "u_add_var": "u_have_gravity_mage_melee", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "gravity_mage_melee", "duration": "PERMANENT" }, { "u_add_var": "u_have_gravity_mage_melee", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "gravity_mage_melee_permanent_manacost",
+    "recurrence": [ "2 h", "2 h" ],
+	"condition": { "and": [ { "u_has_var": "u_have_gravity_mage_melee", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 150 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 150 } ] } ],
+    "false_effect": [ { "u_lose_effect": "gravity_mage_melee" }, { "u_add_var": "u_have_gravity_mage_melee", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

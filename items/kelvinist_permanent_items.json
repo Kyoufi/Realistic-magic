@@ -1,0 +1,77 @@
+[
+  {
+    "copy-from": "create_lighter",
+    "id": "create_lighter",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "finger_firelighter",
+    "id": "finger_firelighter",
+    "type": "TOOL",
+    "name": "finger firelighter",
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "glide_ice_plus",
+    "id": "glide_ice_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "ice_gliders",
+    "id": "ice_gliders",
+    "type": "ARMOR",
+    "name": { "str_sp": "slick icy coatings" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "ice_shield_plus",
+    "id": "ice_shield_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "shield_ice",
+    "id": "shield_ice",
+    "type": "ARMOR",
+    "name": { "str": "large shield of magical ice", "str_pl": "large shields of magical ice" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "frost_armor_plus",
+    "id": "frost_armor_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "armor_frost",
+    "id": "armor_frost",
+    "type": "ARMOR",
+    "name": { "str_sp": "frost armor" },
+    "flags": [
+      "SEMITANGIBLE",
+      "ONLY_ONE",
+      "OVERSIZE",
+      "TRADER_AVOID",
+      "PERSONAL",
+      "STURDY",
+      "NO_DROP",
+      "NONCONDUCTIVE",
+      "PADDED"
+    ]
+  },
+  {
+    "copy-from": "kelvinist_summon_flamesword_plus",
+    "id": "kelvinist_summon_flamesword_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "flamesword",
+    "id": "flamesword",
+    "type": "GENERIC",
+    "name": { "str": "flaming sword" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  }
+]

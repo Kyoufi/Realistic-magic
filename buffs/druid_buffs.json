@@ -1,0 +1,40 @@
+[
+  {
+    "copy-from": "druid_healing",
+    "id": "druid_healing",
+    "type": "SPELL",
+    "learn_spells": { "druid_healing_permanent": 25 }
+  },
+  {
+    "id": "druid_healing_permanent",
+    "type": "SPELL",
+    "name": "Permanent Restoration",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "CONCENTRATE", "SOMATIC", "VERBAL", "NO_LEGS" ],
+    "effect": "effect_on_condition",
+    "effect_str": "druid_healing_permanent",
+    "spell_class": "DRUID",
+    "difficulty": 8,
+    "base_casting_time": 12000,
+    "energy_source": "MANA",
+    "base_energy_cost": 500,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "druid_healing_permanent",
+	"condition": { "u_has_var": "u_have_flask_regeneration", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "flask_regeneration" }, { "u_add_var": "u_have_flask_regeneration", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "flask_regeneration", "duration": "PERMANENT" }, { "u_add_var": "u_have_flask_regeneration", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "druid_healing_permanent_manacost",
+    "recurrence": [ "15 m", "15 m" ],
+	"condition": { "and": [ { "u_has_var": "u_have_flask_regeneration", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 500 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 500 } ] } ],
+	"false_effect": [ { "u_lose_effect": "flask_regeneration" }, { "u_add_var": "u_have_flask_regeneration", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

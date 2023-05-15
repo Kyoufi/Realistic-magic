@@ -1,0 +1,40 @@
+[
+  {
+    "copy-from": "storm_elemental_electric_melee",
+    "id": "storm_elemental_electric_melee",
+    "type": "SPELL",
+    "learn_spells": { "storm_elemental_electric_melee_permanent": 35 }
+  },
+  {
+    "id": "storm_elemental_electric_melee_permanent",
+    "type": "SPELL",
+    "name": "Permanent Galvanic",
+    "description": "After all that trainings this spell had been imprinted in your aura and thus you are now able to recast it unconsciously.",
+    "valid_targets": [ "self" ],
+    "shape": "blast",
+    "flags": [ "NO_LEGS", "SILENT", "NO_HANDS", "NO_EXPLOSION_SFX" ],
+    "effect": "effect_on_condition",
+    "effect_str": "storm_elemental_electric_melee_permanent",
+    "spell_class": "STORM_ELEMENTAL",
+    "difficulty": 4,
+    "energy_source": "MANA",
+    "base_casting_time": 150,
+    "base_energy_cost": 150,
+    "max_level": 0
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "storm_elemental_electric_melee_permanent",
+	"condition": { "u_has_var": "u_have_storm_elemental_electric_melee", "type": "peffect", "context": "peffect", "value": "yes" },
+    "effect": [ { "u_lose_effect": "storm_elemental_electric_melee" }, { "u_add_var": "u_have_storm_elemental_electric_melee", "type": "peffect", "context": "peffect", "value": "no" } ],
+    "false_effect": [ { "u_add_effect": "storm_elemental_electric_melee", "duration": "PERMANENT" }, { "u_add_var": "u_have_storm_elemental_electric_melee", "type": "peffect", "context": "peffect", "value": "yes" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "storm_elemental_electric_melee_permanent_manacost",
+    "recurrence": [ "2 h", "2 h" ],
+	"condition": { "and": [ { "u_has_var": "u_have_storm_elemental_electric_melee", "type": "peffect", "context": "peffect", "value": "yes" }, { "compare_int": [ { "u_val": "mana" }, ">=", { "const": 150 } ] } ] },
+    "effect": [ { "arithmetic": [ { "u_val": "mana" }, "-=", { "const": 150 } ] } ],
+	"false_effect": [ { "u_lose_effect": "storm_elemental_electric_melee" }, { "u_add_var": "u_have_storm_elemental_electric_melee", "type": "peffect", "context": "peffect", "value": "no" } ]
+  }
+]

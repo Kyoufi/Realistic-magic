@@ -1,0 +1,154 @@
+[
+  {
+    "copy-from": "artificer_toolkit",
+    "id": "artificer_toolkit",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "artificer_toolkit",
+    "id": "artificer_toolkit",
+    "type": "GENERIC",
+    "name": { "str": "artificer's toolkit" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "demonic_possession",
+    "id": "demonic_possession",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "demon_possession_aura",
+    "id": "demon_possession_aura",
+    "type": "ARMOR",
+    "name": "Ixythyug the Destroyer's soul",
+    "flags": [ "PERSONAL", "SEMITANGIBLE", "OVERSIZE", "ONLY_ONE", "TRADER_AVOID", "NO_DROP", "NONCONDUCTIVE" ]
+  },
+  {
+    "copy-from": "borealmage_auroral_guard",
+    "id": "borealmage_auroral_guard",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "aura_auroral_guard",
+    "id": "aura_auroral_guard",
+    "type": "ARMOR",
+    "name": { "str_sp": "auroral shell" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "holy_shield",
+    "id": "holy_shield",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "holy_shield",
+    "id": "holy_shield",
+    "type": "TOOL_ARMOR",
+    "name": { "str": "Holy Shield" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "judgement_sword",
+    "id": "judgement_sword",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "longsword_judgement",
+    "id": "longsword_judgement",
+    "type": "GENERIC",
+    "name": { "str": "sword of judgement" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "dagger_judgement",
+    "id": "dagger_judgement",
+    "type": "GENERIC",
+    "name": { "str": "dagger of judgement" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "zwei_judgement",
+    "id": "zwei_judgement",
+    "type": "GENERIC",
+    "name": { "str": "great sword of judgement" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "qiang_judgement",
+    "id": "qiang_judgement",
+    "type": "GENERIC",
+    "name": { "str": "spear of judgement" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "mace_judgement",
+    "id": "mace_judgement",
+    "type": "GENERIC",
+    "name": { "str": "mace of judgement" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "flarewhip",
+    "id": "flarewhip",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "flarewhip",
+    "id": "flarewhip",
+    "type": "GENERIC",
+    "name": "flarewhip",
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "force_magical_armor",
+    "id": "force_magical_armor",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "force_magical_armor",
+    "id": "force_magical_armor",
+    "type": "ARMOR",
+    "name": { "str_sp": "Force Shield" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "summon_subzero_talons",
+    "id": "summon_subzero_talons",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "subzero_talons",
+    "id": "subzero_talons",
+    "type": "GENERIC",
+    "name": { "str_sp": "subzero talons" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "sunmage_pocket_sun",
+    "id": "sunmage_pocket_sun",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "pocket_sun",
+    "id": "pocket_sun",
+    "type": "TOOL",
+    "name": { "str": "Pocket Sun" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "pocket_sun_cover",
+    "id": "pocket_sun_cover",
+    "type": "TOOL",
+    "name": { "str": "Covered Pocket Sun" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  }
+]

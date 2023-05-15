@@ -1,0 +1,25 @@
+[
+  {
+    "type": "SPELL",
+    "id": "biomancer_paralytic_dart",
+    "copy-from": "biomancer_paralytic_dart",
+    "extra_effects": [ { "id": "biomancer_paralytic_dart_bash" } ]
+  },
+  {
+    "copy-from": "biomancer_paralytic_dart",
+    "valid_targets": [ "ally", "hostile", "ground" ],
+    "id": "biomancer_paralytic_dart_bash",
+    "type": "SPELL",
+    "effect": "bash",
+    "extra_effects": [  ]
+  },
+  {
+    "type": "SPELL",
+    "id": "bio_acidicspray",
+    "copy-from": "bio_acidicspray",
+    "field_id": "fd_acid",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  }
+]

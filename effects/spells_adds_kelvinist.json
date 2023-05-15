@@ -1,0 +1,32 @@
+[
+  {
+    "type": "SPELL",
+    "id": "ice_spike",
+    "copy-from": "ice_spike",
+    "field_id": "fd_extinguisher",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+	"field_intensity_increment": 0.05
+  },
+  {
+    "type": "SPELL",
+    "id": "frost_spray",
+    "copy-from": "frost_spray",
+    "field_id": "fd_extinguisher",
+    "field_chance": 2,
+    "min_field_intensity": 1,
+    "max_field_intensity": 2,
+	"field_intensity_increment": 0.03
+  },
+  {
+    "type": "SPELL",
+    "id": "hoary_blast",
+    "copy-from": "hoary_blast",
+    "field_id": "fd_extinguisher",
+    "field_chance": 1,
+    "min_field_intensity": 1,
+    "max_field_intensity": 3,
+	"field_intensity_increment": 0.05
+  }
+]

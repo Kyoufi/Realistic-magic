@@ -1,0 +1,28 @@
+[
+  {
+    "copy-from": "druid_naturebow1_plus",
+    "id": "druid_naturebow1_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "druid_recurve",
+    "id": "druid_recurve",
+    "type": "GUN",
+    "name": { "str": "Woodbow" },
+    "extend": { "flags": [ "NO_DROP" ] }
+  },
+  {
+    "copy-from": "druid_feralform_plus",
+    "id": "druid_feralform_plus",
+    "type": "SPELL",
+    "extend": { "flags": [ "PERMANENT" ] }
+  },
+  {
+    "copy-from": "aura_feral",
+    "id": "aura_feral",
+    "type": "ARMOR",
+    "name": "feral aura",
+    "flags": [ "PERSONAL", "SEMITANGIBLE", "OVERSIZE", "ONLY_ONE", "TRADER_AVOID", "NO_DROP", "NONCONDUCTIVE" ]
+  }
+]
