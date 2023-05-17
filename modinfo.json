@@ -7,6 +7,6 @@
     "maintainers": [ "Kyoufi" ],
     "description": "Various improvements to Magiclysm spells.",
     "category": "magical",
-    "dependencies": [ "dda", "Magiclysm" ]
+    "dependencies": [ "dda", "magiclysm" ]
   }
 ]
